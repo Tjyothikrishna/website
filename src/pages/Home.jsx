@@ -172,6 +172,54 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className="bg-slate-50 py-16">
+        <div className="mx-auto w-full max-w-6xl px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
+              Driving Measurable Cloud &amp; DevOps Outcomes
+            </h2>
+            <p className="mt-4 text-base text-slate-600 md:text-lg">
+              We align platform engineering initiatives to measurable business outcomes with performance,
+              resiliency, efficiency, and reliability at enterprise scale.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-3xl font-extrabold leading-tight text-blue-900 md:text-4xl">60%</p>
+              <h3 className="mt-2 text-lg font-semibold text-slate-900">Faster Deployment Cycles</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Accelerated CI/CD pipelines improving release velocity and reducing manual overhead.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-3xl font-extrabold leading-tight text-blue-900 md:text-4xl">99.99%</p>
+              <h3 className="mt-2 text-lg font-semibold text-slate-900">High-Availability Architecture</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Designed resilient cloud-native systems with fault tolerance and auto-scaling.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-3xl font-extrabold leading-tight text-blue-900 md:text-4xl">40%</p>
+              <h3 className="mt-2 text-lg font-semibold text-slate-900">Infrastructure Cost Optimization</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Optimized cloud spend through right-sizing, automation, and infrastructure audits.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-3xl font-extrabold leading-tight text-blue-900 md:text-4xl">24/7</p>
+              <h3 className="mt-2 text-lg font-semibold text-slate-900">Reliability &amp; Monitoring Support</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Continuous observability, alerting, and incident response engineering.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
       <ServicesSection />
       <AboutSection />
       <ContactSection />
