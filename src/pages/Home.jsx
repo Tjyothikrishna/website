@@ -1,6 +1,17 @@
-import App from '../App';
+import Hero from '../components/Hero';
+import ServicesSection from '../components/Services';
+import AboutSection from '../components/About';
+import ContactSection from '../components/Contact';
 
-// Home page wrapper kept for scalable routing structure.
-const Home = () => <App />;
+const Home = () => {
+  return (
+    <>
+      <Hero />
+      <ServicesSection />
+      <AboutSection />
+      <ContactSection />
+    </>
+  );
+};
 
 export default Home;
