@@ -1,3 +1,5 @@
+import logo from '../assets/Fusionnexlogo.jpg';
+
 // Responsive navigation bar with anchor links for quick section access.
 const Navbar = () => {
   const links = [
@@ -7,10 +9,14 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-xl font-bold tracking-tight text-slate-900">
-          YourCompany
+        <a href="#" className="flex items-center gap-3">
+          <img src={logo} alt="Fusionnex logo" className="h-10 w-10 rounded object-cover" />
+          <span className="flex flex-col leading-tight">
+            <span className="text-lg font-bold tracking-tight text-slate-900">FUSIONNEX</span>
+            <span className="text-xs text-slate-500">Innovations India Pvt Ltd</span>
+          </span>
         </a>
 
         <nav aria-label="Primary navigation" className="hidden gap-8 md:flex">
@@ -27,7 +33,7 @@ const Navbar = () => {
 
         <a
           href="#contact"
-          className="rounded-md bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-brand-700"
+          className="rounded-md bg-blue-900 px-4 py-2 text-sm font-semibold text-white transition duration-300 hover:bg-red-600"
         >
           Get Started
         </a>
