@@ -14,11 +14,54 @@
   }
 }
 
+@keyframes brandGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* Shared styles for smooth scrolling and typography defaults. */
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  position: relative;
+  min-height: 100vh;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 45%, #dc2626 100%);
+  background-size: 200% 200%;
+  animation: brandGradientShift 18s ease infinite;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.15;
+  filter: blur(120px);
+}
+
+body::before {
+  top: -140px;
+  left: -120px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(30, 64, 175, 0.55) 0%, rgba(30, 64, 175, 0) 72%);
+}
+
+body::after {
+  right: -140px;
+  bottom: -140px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.55) 0%, rgba(220, 38, 38, 0) 72%);
 }
