@@ -50,6 +50,36 @@ const Home = () => {
       <ServicesSection />
       <AboutSection />
       <ContactSection />
+
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-950 via-blue-900 to-blue-800 py-16 md:py-20">
+        <div className="pointer-events-none absolute -right-20 top-1/2 h-52 w-52 -translate-y-1/2 rounded-full bg-red-500/30 blur-3xl" />
+        <div className="pointer-events-none absolute left-10 top-8 h-24 w-24 rounded-full bg-white/10 blur-2xl" />
+
+        <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center px-6 text-center">
+          <h2 className="text-3xl font-bold leading-tight text-white md:text-5xl">
+            Ready to Modernize Your Cloud &amp; DevOps Strategy?
+          </h2>
+          <p className="mt-5 max-w-3xl text-base text-blue-100 md:text-lg">
+            Partner with Fusionnex to accelerate digital transformation, automate infrastructure, and
+            build scalable cloud-native platforms.
+          </p>
+
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href="#contact"
+              className="rounded-md bg-white px-7 py-3 text-sm font-semibold text-blue-900 shadow transition duration-300 hover:-translate-y-0.5 hover:bg-blue-100"
+            >
+              Talk to a DevOps Expert
+            </a>
+            <a
+              href="#contact"
+              className="rounded-md border border-white/60 px-7 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+            >
+              Schedule Consultation
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
