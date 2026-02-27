@@ -1,7 +1,13 @@
+import PageSeo from '../components/PageSeo';
 const Careers = () => {
   return (
     <section className="bg-slate-50 py-20">
-      <div className="mx-auto w-full max-w-5xl px-6">
+      <PageSeo
+        title="Careers | Join Fusionnex Cloud & DevOps Team"
+        description="Explore career opportunities at Fusionnex and join experts building modern cloud-native and DevOps-driven enterprise platforms."
+        ogType="website"
+      />
+            <div className="mx-auto w-full max-w-5xl px-6">
         <h1 className="text-4xl font-bold text-slate-900">Careers</h1>
         <p className="mt-4 text-slate-600">
           Join our team of engineers, consultants, and problem-solvers building impactful digital experiences.

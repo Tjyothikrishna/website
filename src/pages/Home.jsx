@@ -1,10 +1,16 @@
 import ServicesSection from '../components/Services';
 import AboutSection from '../components/About';
 import ContactSection from '../components/Contact';
+import PageSeo from '../components/PageSeo';
 
 const Home = () => {
   return (
     <>
+      <PageSeo
+        title="Fusionnex | Cloud & DevOps Engineering for Enterprises"
+        description="Fusionnex delivers scalable cloud and DevOps platforms with CI/CD automation, Kubernetes, IaC, DevSecOps, and SRE excellence."
+        ogType="website"
+      />
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 bg-[length:200%_200%] animate-[gradientShift_10s_ease_infinite]">
         <div className="pointer-events-none absolute inset-0 opacity-10 [background-image:linear-gradient(to_right,rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.2)_1px,transparent_1px)] [background-size:48px_48px]" />
         <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-red-600 opacity-20 blur-3xl animate-pulse" />

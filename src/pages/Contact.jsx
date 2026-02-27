@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PageSeo from '../components/PageSeo';
 
 const initialFormState = {
   fullName: '',
@@ -125,6 +126,11 @@ const Contact = () => {
 
   return (
     <main className="bg-slate-50 py-20">
+      <PageSeo
+        title="Contact Fusionnex | Talk to Cloud & DevOps Experts"
+        description="Contact Fusionnex to discuss cloud modernization, DevOps automation, platform reliability, and enterprise transformation initiatives."
+        ogType="website"
+      />
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <section>

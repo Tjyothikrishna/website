@@ -1,3 +1,4 @@
+import PageSeo from '../components/PageSeo';
 const industrySolutions = [
   {
     title: 'Financial Services',
@@ -64,6 +65,11 @@ const industrySolutions = [
 const Industries = () => {
   return (
     <main className="bg-slate-50">
+      <PageSeo
+        title="Industries | Fusionnex Industry-Focused Cloud & DevOps Solutions"
+        description="Discover Fusionnex industry-specific cloud and DevOps solutions for financial services, healthcare, retail, SaaS, and manufacturing enterprises."
+        ogType="website"
+      />
       <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 py-20 text-white">
         <div className="mx-auto w-full max-w-6xl px-6">
           <p className="inline-block rounded-full border border-white/30 bg-white/10 px-3 py-1 text-sm font-medium">

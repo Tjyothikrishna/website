@@ -1,4 +1,5 @@
-const services = [
+import PageSeo from '../components/PageSeo';
+const serviceGroups = [
   {
     title: 'CI/CD Pipeline Engineering',
     overview: [
@@ -93,69 +94,29 @@ const services = [
 
 const Services = () => {
   return (
-    <main className="bg-slate-50">
-      <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 py-20 text-white">
-        <div className="mx-auto w-full max-w-6xl px-6">
-          <p className="inline-block rounded-full border border-white/30 bg-white/10 px-3 py-1 text-sm font-medium">
-            Enterprise DevOps Consulting Services
-          </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight md:text-5xl">
-            Cloud &amp; DevOps Services Built for Enterprise Scale
-          </h1>
-          <p className="mt-6 max-w-3xl text-base text-blue-100 md:text-lg">
-            Fusionnex helps organizations modernize engineering platforms, automate cloud operations,
-            and deliver secure, reliable digital products faster. Our consulting model combines strategy,
-            implementation, and operational enablement for measurable business outcomes.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-20">
-        <div className="mx-auto w-full max-w-6xl px-6">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Our Core Service Areas</h2>
-            <p className="mt-4 text-slate-600 md:text-lg">
-              Each engagement is structured to align technology transformation with operational
-              excellence, security, and business performance.
-            </p>
-          </div>
-
-          <div className="mt-10 space-y-8">
-            {services.map((service) => (
-              <article
-                key={service.title}
-                className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm md:p-9"
-              >
-                <h3 className="text-2xl font-semibold text-blue-900">{service.title}</h3>
-
-                <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700 md:text-base">
-                  {service.overview.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-
-                <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-                  <div>
-                    <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-900">
-                      Key Capabilities
-                    </h4>
-                    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600 md:text-base">
-                      {service.capabilities.map((capability) => (
-                        <li key={capability}>{capability}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="rounded-xl border border-blue-100 bg-blue-50 p-5">
-                    <h4 className="text-sm font-semibold uppercase tracking-wide text-blue-900">
-                      Business Impact
-                    </h4>
-                    <p className="mt-3 text-sm leading-6 text-slate-700 md:text-base">{service.impact}</p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+    <section className="bg-slate-50 py-20">
+      <PageSeo
+        title="Services | Fusionnex Cloud & DevOps Consulting"
+        description="Explore Fusionnex cloud and DevOps consulting services across CI/CD engineering, cloud migration, IaC, Kubernetes, DevSecOps, and SRE."
+        ogType="website"
+      />
+            <div className="mx-auto w-full max-w-6xl px-6">
+        <h1 className="text-4xl font-bold text-slate-900">Services</h1>
+        <p className="mt-4 max-w-3xl text-slate-600">
+          We provide enterprise-grade consulting and implementation services to accelerate your digital
+          transformation roadmap.
+        </p>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {serviceGroups.map((group) => (
+            <article key={group.title} className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+              <h2 className="text-xl font-semibold text-slate-900">{group.title}</h2>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600">
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </section>
     </main>
