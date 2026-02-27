@@ -1,3 +1,4 @@
+import PageSeo from '../components/PageSeo';
 const serviceGroups = [
   {
     title: 'Cloud & Platform Engineering',
@@ -16,7 +17,12 @@ const serviceGroups = [
 const Services = () => {
   return (
     <section className="bg-slate-50 py-20">
-      <div className="mx-auto w-full max-w-6xl px-6">
+      <PageSeo
+        title="Services | Fusionnex Cloud & DevOps Consulting"
+        description="Explore Fusionnex cloud and DevOps consulting services across CI/CD engineering, cloud migration, IaC, Kubernetes, DevSecOps, and SRE."
+        ogType="website"
+      />
+            <div className="mx-auto w-full max-w-6xl px-6">
         <h1 className="text-4xl font-bold text-slate-900">Services</h1>
         <p className="mt-4 max-w-3xl text-slate-600">
           We provide enterprise-grade consulting and implementation services to accelerate your digital
