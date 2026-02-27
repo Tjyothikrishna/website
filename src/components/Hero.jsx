@@ -1,41 +1,46 @@
 // Hero section introduces the company with clear value proposition and CTA.
 const Hero = () => {
   return (
-    <section className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
-      <div>
-        <p className="mb-4 inline-block rounded-full bg-brand-50 px-3 py-1 text-sm font-medium text-brand-700">
-          Trusted by fast-growing businesses
-        </p>
-        <h1 className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl">
-          Modern solutions for ambitious companies.
-        </h1>
-        <p className="mt-6 text-lg text-slate-600">
-          We help businesses streamline operations, grow revenue, and build digital experiences that
-          customers love.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-4">
-          <a
-            href="#services"
-            className="rounded-md bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow transition hover:bg-brand-700"
-          >
-            Explore Services
-          </a>
-          <a
-            href="#about"
-            className="rounded-md border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
-          >
-            Learn More
-          </a>
-        </div>
-      </div>
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 bg-[length:200%_200%] animate-[gradientShift_10s_ease_infinite]">
+      <div className="pointer-events-none absolute inset-0 opacity-10 [background-image:linear-gradient(to_right,rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.2)_1px,transparent_1px)] [background-size:48px_48px]" />
+      <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-red-600 opacity-20 blur-3xl animate-pulse" />
 
-      <div className="rounded-2xl bg-slate-100 p-8 shadow-sm">
-        <h2 className="text-xl font-semibold text-slate-900">Why companies choose us</h2>
-        <ul className="mt-5 space-y-3 text-slate-600">
-          <li>✔ Data-driven strategy and measurable outcomes</li>
-          <li>✔ Experienced team focused on quality delivery</li>
-          <li>✔ Scalable systems designed for long-term growth</li>
-        </ul>
+      <div className="relative mx-auto grid w-full max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
+        <div>
+          <p className="mb-4 inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium text-white">
+            Trusted by fast-growing businesses
+          </p>
+          <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl">
+            Modern solutions for ambitious companies.
+          </h1>
+          <p className="mt-6 text-lg text-blue-100">
+            We help businesses streamline operations, grow revenue, and build digital experiences that
+            customers love.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#services"
+              className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-900 shadow transition hover:bg-blue-100"
+            >
+              Explore Services
+            </a>
+            <a
+              href="#about"
+              className="rounded-md border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <div className="rounded-2xl border border-white/20 bg-white/10 p-8 shadow-sm backdrop-blur-sm">
+          <h2 className="text-xl font-semibold text-white">Why companies choose us</h2>
+          <ul className="mt-5 space-y-3 text-blue-100">
+            <li>✔ Data-driven strategy and measurable outcomes</li>
+            <li>✔ Experienced team focused on quality delivery</li>
+            <li>✔ Scalable systems designed for long-term growth</li>
+          </ul>
+        </div>
       </div>
     </section>
   );
