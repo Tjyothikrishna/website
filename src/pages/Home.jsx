@@ -220,6 +220,73 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className="bg-white py-16">
+        <div className="mx-auto w-full max-w-6xl px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
+              Enterprise DevOps Success Stories
+            </h2>
+            <p className="mt-4 text-base text-slate-600 md:text-lg">
+              Proven transformation outcomes from enterprise engagements across regulated and
+              high-growth digital platforms.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <article className="rounded-xl border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <h3 className="text-xl font-semibold text-blue-900">
+                Financial SaaS Platform DevOps Transformation
+              </h3>
+
+              <div className="mt-5 space-y-4 text-sm leading-6 text-slate-700">
+                <p>
+                  <span className="font-semibold text-slate-900">Challenge:</span> Frequent deployment
+                  failures and manual infrastructure management.
+                </p>
+                <p>
+                  <span className="font-semibold text-slate-900">Solution:</span> Implemented CI/CD
+                  automation, Terraform-based infrastructure as code, and Kubernetes deployment
+                  pipelines.
+                </p>
+                <div>
+                  <p className="font-semibold text-slate-900">Results:</p>
+                  <ul className="mt-2 list-inside list-disc space-y-1 text-slate-600">
+                    <li>70% reduction in deployment errors</li>
+                    <li>3x faster release cycles</li>
+                    <li>Improved system reliability</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <h3 className="text-xl font-semibold text-blue-900">
+                E-commerce Cloud Migration &amp; Scalability Upgrade
+              </h3>
+
+              <div className="mt-5 space-y-4 text-sm leading-6 text-slate-700">
+                <p>
+                  <span className="font-semibold text-slate-900">Challenge:</span> Scalability issues
+                  during peak traffic events.
+                </p>
+                <p>
+                  <span className="font-semibold text-slate-900">Solution:</span> Re-architected
+                  infrastructure on AWS with auto-scaling, monitoring, and performance optimization.
+                </p>
+                <div>
+                  <p className="font-semibold text-slate-900">Results:</p>
+                  <ul className="mt-2 list-inside list-disc space-y-1 text-slate-600">
+                    <li>99.99% uptime</li>
+                    <li>35% cost optimization</li>
+                    <li>Zero downtime migration</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
       <ServicesSection />
       <AboutSection />
       <ContactSection />
