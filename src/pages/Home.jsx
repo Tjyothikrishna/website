@@ -47,6 +47,70 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className="bg-slate-50 py-16">
+        <div className="mx-auto w-full max-w-6xl px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
+              Core DevOps &amp; Cloud Engineering Services
+            </h2>
+            <p className="mt-4 text-base text-slate-600 md:text-lg">
+              Enterprise-focused delivery designed to accelerate software velocity, improve reliability,
+              and strengthen security across cloud-native platforms.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">CI/CD Pipeline Automation</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Build resilient delivery pipelines that automate testing, releases, and rollback workflows
+                for faster, low-risk deployments.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">Cloud Architecture &amp; Migration</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Design scalable cloud foundations and execute phased migrations to modern platforms with
+                minimal operational disruption.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">Infrastructure as Code (Terraform)</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Standardize and provision infrastructure through reusable Terraform modules that improve
+                consistency, governance, and speed.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">Kubernetes &amp; Containerization</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Containerize workloads and implement Kubernetes operating models that support elasticity,
+                portability, and high availability.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">DevSecOps Implementation</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Embed security controls into development pipelines with policy automation, continuous
+                scanning, and compliance-ready practices.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">Monitoring &amp; Observability Engineering</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Implement observability stacks with actionable telemetry, alerting, and SLO reporting to
+                drive proactive incident response.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
       <ServicesSection />
       <AboutSection />
       <ContactSection />
