@@ -111,6 +111,67 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className="bg-white py-16">
+        <div className="mx-auto w-full max-w-6xl px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
+              Cloud &amp; DevOps Technology Stack
+            </h2>
+            <p className="mt-4 text-base text-slate-600 md:text-lg">
+              We use proven cloud-native technologies and automation tooling to deliver secure,
+              scalable, and production-ready engineering platforms.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article className="rounded-xl border border-slate-200 bg-slate-50 p-6">
+              <h3 className="text-lg font-semibold text-blue-900">Cloud Platforms</h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                <li>AWS</li>
+                <li>Microsoft Azure</li>
+                <li>Google Cloud Platform</li>
+              </ul>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-slate-50 p-6">
+              <h3 className="text-lg font-semibold text-blue-900">DevOps &amp; CI/CD</h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                <li>Jenkins</li>
+                <li>GitHub Actions</li>
+                <li>GitLab CI</li>
+              </ul>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-slate-50 p-6">
+              <h3 className="text-lg font-semibold text-blue-900">Container &amp; Orchestration</h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>Helm</li>
+              </ul>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-slate-50 p-6">
+              <h3 className="text-lg font-semibold text-blue-900">Infrastructure as Code</h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                <li>Terraform</li>
+                <li>Ansible</li>
+                <li>CloudFormation</li>
+              </ul>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-slate-50 p-6">
+              <h3 className="text-lg font-semibold text-blue-900">Monitoring &amp; Observability</h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                <li>Prometheus</li>
+                <li>Grafana</li>
+                <li>ELK Stack</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
       <ServicesSection />
       <AboutSection />
       <ContactSection />
