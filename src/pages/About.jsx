@@ -1,6 +1,12 @@
+import PageSeo from '../components/PageSeo';
 const About = () => {
   return (
     <section className="py-20">
+      <PageSeo
+        title="About Fusionnex | Enterprise Cloud & DevOps Partner"
+        description="Learn about Fusionnex Innovations India Pvt Ltd and how our teams deliver enterprise cloud and DevOps transformation with measurable impact."
+        ogType="website"
+      />
       <div className="mx-auto w-full max-w-5xl px-6">
         <h1 className="text-4xl font-bold text-slate-900">About Fusionnex</h1>
         <p className="mt-5 text-slate-600">
