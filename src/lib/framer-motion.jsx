@@ -21,7 +21,12 @@ const createMotionComponent = (Tag) => {
         const node = innerRef.current;
         if (!node) return undefined;
 
-        const observer = new IntersectionObserver(
+        if (typeof window === 'undefined' || typeof window.IntersectionObserver === 'undefined') {
+          setIsVisible(true);
+          return undefined;
+        }
+
+        const observer = new window.IntersectionObserver(
           (entries) => {
             const [entry] = entries;
             if (entry.isIntersecting) {
