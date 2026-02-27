@@ -9,6 +9,7 @@ export default defineConfig({
     alias: {
       'react-router-dom': path.resolve(__dirname, 'src/lib/react-router-dom.jsx'),
       'react-helmet-async': path.resolve(__dirname, 'src/lib/react-helmet-async.jsx'),
+      'framer-motion': path.resolve(__dirname, 'src/lib/framer-motion.jsx'),
     },
   },
 });

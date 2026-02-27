@@ -1,4 +1,5 @@
 import PageSeo from '../components/PageSeo';
+import AnimatedSection from '../components/AnimatedSection';
 const industrySolutions = [
   {
     title: 'Financial Services',
@@ -70,7 +71,7 @@ const Industries = () => {
         description="Discover Fusionnex industry-specific cloud and DevOps solutions for financial services, healthcare, retail, SaaS, and manufacturing enterprises."
         ogType="website"
       />
-      <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 py-20 text-white">
+      <AnimatedSection className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 py-20 text-white">
         <div className="mx-auto w-full max-w-6xl px-6">
           <p className="inline-block rounded-full border border-white/30 bg-white/10 px-3 py-1 text-sm font-medium">
             Enterprise Industry Solutions
@@ -83,9 +84,9 @@ const Industries = () => {
             industry-specific operational, compliance, and scalability challenges.
           </p>
         </div>
-      </section>
+      </AnimatedSection>
 
-      <section className="py-16 md:py-20">
+      <AnimatedSection className="py-16 md:py-20">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="space-y-8">
             {industrySolutions.map((industry) => (
@@ -122,7 +123,7 @@ const Industries = () => {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
     </main>
   );
 };

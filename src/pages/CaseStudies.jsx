@@ -1,4 +1,5 @@
 import PageSeo from '../components/PageSeo';
+import AnimatedSection from '../components/AnimatedSection';
 const studies = [
   {
     client: 'Global Retail Brand',
@@ -16,7 +17,7 @@ const studies = [
 
 const CaseStudies = () => {
   return (
-    <section className="bg-slate-50 py-20">
+    <AnimatedSection className="bg-slate-50 py-20">
       <PageSeo
         title="Case Studies | Fusionnex Transformation Outcomes"
         description="Read Fusionnex case studies showcasing measurable outcomes in CI/CD modernization, cloud reliability, and secure digital transformation."
@@ -36,7 +37,7 @@ const CaseStudies = () => {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 };
 

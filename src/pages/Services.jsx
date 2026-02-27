@@ -1,4 +1,5 @@
 import PageSeo from '../components/PageSeo';
+import AnimatedSection from '../components/AnimatedSection';
 const serviceGroups = [
   {
     title: 'CI/CD Pipeline Engineering',
@@ -94,7 +95,7 @@ const serviceGroups = [
 
 const Services = () => {
   return (
-    <section className="bg-slate-50 py-20">
+    <AnimatedSection className="bg-slate-50 py-20">
       <PageSeo
         title="Services | Fusionnex Cloud & DevOps Consulting"
         description="Explore Fusionnex cloud and DevOps consulting services across CI/CD engineering, cloud migration, IaC, Kubernetes, DevSecOps, and SRE."
@@ -118,8 +119,8 @@ const Services = () => {
             </article>
           ))}
         </div>
-      </section>
-    </main>
+      </div>
+    </AnimatedSection>
   );
 };
 
