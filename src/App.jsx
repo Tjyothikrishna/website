@@ -10,7 +10,7 @@ import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 
 const AppLayout = ({ children }) => (
-  <div className="min-h-screen bg-white text-slate-800">
+  <div className="min-h-screen bg-transparent text-slate-800">
     <Navbar />
     <main>{children}</main>
     <Footer />

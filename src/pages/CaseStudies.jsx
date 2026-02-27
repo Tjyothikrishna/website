@@ -1,3 +1,5 @@
+import PageSeo from '../components/PageSeo';
+import AnimatedSection from '../components/AnimatedSection';
 const studies = [
   {
     client: 'Global Retail Brand',
@@ -15,8 +17,13 @@ const studies = [
 
 const CaseStudies = () => {
   return (
-    <section className="bg-slate-50 py-20">
-      <div className="mx-auto w-full max-w-6xl px-6">
+    <AnimatedSection className="bg-slate-50 py-20">
+      <PageSeo
+        title="Case Studies | Fusionnex Transformation Outcomes"
+        description="Read Fusionnex case studies showcasing measurable outcomes in CI/CD modernization, cloud reliability, and secure digital transformation."
+        ogType="article"
+      />
+            <div className="mx-auto w-full max-w-6xl px-6">
         <h1 className="text-4xl font-bold text-slate-900">Case Studies</h1>
         <p className="mt-4 max-w-3xl text-slate-600">
           Real outcomes from enterprise engagements focused on measurable delivery improvements.
@@ -30,7 +37,7 @@ const CaseStudies = () => {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 };
 
