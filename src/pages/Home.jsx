@@ -1,4 +1,3 @@
-import Hero from '../components/Hero';
 import ServicesSection from '../components/Services';
 import AboutSection from '../components/About';
 import ContactSection from '../components/Contact';
@@ -6,7 +5,112 @@ import ContactSection from '../components/Contact';
 const Home = () => {
   return (
     <>
-      <Hero />
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 bg-[length:200%_200%] animate-[gradientShift_10s_ease_infinite]">
+        <div className="pointer-events-none absolute inset-0 opacity-10 [background-image:linear-gradient(to_right,rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.2)_1px,transparent_1px)] [background-size:48px_48px]" />
+        <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-red-600 opacity-20 blur-3xl animate-pulse" />
+
+        <div className="relative mx-auto grid w-full max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
+          <div>
+            <p className="mb-4 inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium text-white">
+              Trusted by fast-growing businesses
+            </p>
+            <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl">
+              Engineering Scalable Cloud &amp; DevOps Platforms for Modern Enterprises
+            </h1>
+            <p className="mt-6 text-lg text-blue-100">
+              We deliver CI/CD automation, Infrastructure as Code, Kubernetes enablement, DevSecOps
+              practices, and SRE-driven reliability to accelerate secure, resilient growth.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-900 shadow transition hover:bg-blue-100"
+              >
+                Talk to an Expert
+              </a>
+              <a
+                href="#services"
+                className="rounded-md border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                View Services
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-white/20 bg-white/10 p-8 shadow-sm backdrop-blur-sm">
+            <h2 className="text-xl font-semibold text-white">Why companies choose us</h2>
+            <ul className="mt-5 space-y-3 text-blue-100">
+              <li>✔ Data-driven strategy and measurable outcomes</li>
+              <li>✔ Experienced team focused on quality delivery</li>
+              <li>✔ Scalable systems designed for long-term growth</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-16">
+        <div className="mx-auto w-full max-w-6xl px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
+              Core DevOps &amp; Cloud Engineering Services
+            </h2>
+            <p className="mt-4 text-base text-slate-600 md:text-lg">
+              Enterprise-focused delivery designed to accelerate software velocity, improve reliability,
+              and strengthen security across cloud-native platforms.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">CI/CD Pipeline Automation</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Build resilient delivery pipelines that automate testing, releases, and rollback workflows
+                for faster, low-risk deployments.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">Cloud Architecture &amp; Migration</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Design scalable cloud foundations and execute phased migrations to modern platforms with
+                minimal operational disruption.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">Infrastructure as Code (Terraform)</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Standardize and provision infrastructure through reusable Terraform modules that improve
+                consistency, governance, and speed.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">Kubernetes &amp; Containerization</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Containerize workloads and implement Kubernetes operating models that support elasticity,
+                portability, and high availability.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">DevSecOps Implementation</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Embed security controls into development pipelines with policy automation, continuous
+                scanning, and compliance-ready practices.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-blue-900">Monitoring &amp; Observability Engineering</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Implement observability stacks with actionable telemetry, alerting, and SLO reporting to
+                drive proactive incident response.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
       <ServicesSection />
       <AboutSection />
       <ContactSection />
