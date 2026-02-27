@@ -12,7 +12,8 @@ const Contact = () => {
   const [formData, setFormData] = useState(initialFormState);
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState('');
+  const [submitError, setSubmitError] = useState('');
 
   const validate = () => {
     const nextErrors = {};
@@ -39,7 +40,8 @@ const Contact = () => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: '' }));
-    setIsSubmitted(false);
+    setSubmitSuccess('');
+    setSubmitError('');
   };
 
   const handleSubmit = async (event) => {
@@ -48,20 +50,57 @@ const Contact = () => {
 
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      setIsSubmitted(false);
+      setSubmitSuccess('');
+      setSubmitError('');
       return;
     }
 
     setErrors({});
+    setSubmitSuccess('');
+    setSubmitError('');
     setIsSubmitting(true);
 
-    await new Promise((resolve) => {
-      setTimeout(resolve, 1200);
-    });
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData(initialFormState);
+    if (!serviceId || !templateId || !publicKey) {
+      setIsSubmitting(false);
+      setSubmitError('Email configuration is missing. Please set EmailJS environment variables.');
+      return;
+    }
+
+    try {
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          service_id: serviceId,
+          template_id: templateId,
+          user_id: publicKey,
+          template_params: {
+            full_name: formData.fullName,
+            email: formData.email,
+            company_name: formData.companyName,
+            phone_number: formData.phoneNumber,
+            message: formData.message,
+          },
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email.');
+      }
+
+      setSubmitSuccess('Thank you! Your message has been submitted successfully.');
+      setFormData(initialFormState);
+    } catch (error) {
+      setSubmitError('Unable to send your message right now. Please try again shortly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -96,9 +135,15 @@ const Contact = () => {
               Share your requirements and our team will get back to you shortly.
             </p>
 
-            {isSubmitted && (
+            {submitSuccess && (
               <div className="mt-5 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
-                Thank you! Your message has been submitted successfully.
+                {submitSuccess}
+              </div>
+            )}
+
+            {submitError && (
+              <div className="mt-5 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                {submitError}
               </div>
             )}
 
