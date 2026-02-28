@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PageSeo from '../components/PageSeo';
 import AnimatedSection from '../components/AnimatedSection';
 
@@ -54,21 +55,28 @@ const serviceGroups = [
 
 const Services = () => {
   return (
-    <AnimatedSection className="bg-transparent px-6 py-24">
+    <AnimatedSection className="min-h-screen bg-transparent px-6 py-24">
       <PageSeo
         title="Services | Fusionnex Cloud & DevOps Consulting"
         description="Explore Fusionnex cloud and DevOps consulting services across CI/CD engineering, cloud migration, IaC, Kubernetes, DevSecOps, and SRE."
         ogType="website"
       />
-      <div className="mx-auto w-full max-w-6xl">
-        <div className="mb-14 max-w-3xl">
-          <h1 className="text-4xl font-bold text-white md:text-5xl">Services</h1>
-          <p className="mt-4 text-slate-300">
-            End-to-end modernization programs designed for reliability, security, and accelerated delivery.
+      <div className="mx-auto w-full max-w-6xl space-y-14">
+        <section className="rounded-2xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
+          <h1 className="text-4xl font-bold text-white md:text-5xl">Premium Cloud & DevOps Services</h1>
+          <p className="mt-4 max-w-3xl text-slate-300 md:text-lg">
+            End-to-end modernization programs designed for reliability, security, and accelerated delivery
+            across enterprise engineering teams.
           </p>
-        </div>
+          <Link
+            to="/contact"
+            className="mt-7 inline-flex rounded-2xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:scale-[1.02]"
+          >
+            Discuss Your Program
+          </Link>
+        </section>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {serviceGroups.map((group) => (
             <article key={group.title} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
               <h2 className="text-xl font-semibold text-white">{group.title}</h2>
@@ -79,7 +87,7 @@ const Services = () => {
               </ul>
             </article>
           ))}
-        </div>
+        </section>
       </div>
     </AnimatedSection>
   );

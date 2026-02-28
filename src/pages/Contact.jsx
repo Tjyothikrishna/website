@@ -113,19 +113,23 @@ const Contact = () => {
   };
 
   return (
-    <AnimatedSection className="flex min-h-screen items-center bg-transparent px-6 py-24">
+    <AnimatedSection className="min-h-screen bg-transparent px-6 py-24">
       <PageSeo
         title="Contact Fusionnex | Talk to Cloud & DevOps Experts"
         description="Contact Fusionnex to discuss cloud modernization, DevOps automation, platform reliability, and enterprise transformation initiatives."
         ogType="website"
       />
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-6xl space-y-12">
+        <section className="rounded-2xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
+          <h1 className="text-4xl font-bold text-white md:text-5xl">Contact Fusionnex</h1>
+          <p className="mt-4 max-w-3xl text-slate-300 md:text-lg">Let's design a premium cloud and DevOps roadmap tailored to your operating model, security posture, and growth targets.</p>
+        </section>
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <section className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
             <p className="inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium text-slate-300">
               Enterprise Contact
             </p>
-            <h1 className="mt-5 text-4xl font-bold text-white md:text-5xl">Let&apos;s Build Your Next Platform</h1>
+            <h2 className="mt-5 text-3xl font-bold text-white md:text-4xl">Let&apos;s Build Your Next Platform</h2>
             <p className="mt-5 text-slate-300 md:text-lg">
               Connect with our cloud and DevOps experts to discuss modernization priorities, platform strategy,
               and implementation roadmaps tailored to your business goals.
@@ -245,7 +249,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline-flex min-w-44 items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20 disabled:cursor-not-allowed disabled:opacity-70"
+                className="inline-flex min-w-44 items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {isSubmitting ? 'Submitting...' : 'Submit Enquiry'}
               </button>

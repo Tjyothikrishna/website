@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PageSeo from '../components/PageSeo';
 import AnimatedSection from '../components/AnimatedSection';
 
@@ -18,32 +19,40 @@ const Home = () => {
 
       <AnimatedSection className="flex min-h-screen items-center bg-transparent px-6 py-24">
         <div className="mx-auto grid w-full max-w-6xl gap-10 md:grid-cols-2 md:items-center">
-          <div className="space-y-6">
-            <p className="inline-flex rounded-full border border-white/20 bg-white/5 px-3 py-1 text-sm text-slate-300 backdrop-blur-xl">
-              Premium Cloud & DevOps Transformation
+          <div className="space-y-7">
+            <p className="inline-flex rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-slate-300 backdrop-blur-xl">
+              Fusionnex Premium Layout System
             </p>
             <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
-              Futuristic Platform Engineering for High-Growth Enterprises
+              Build Futuristic Cloud Platforms with Enterprise Reliability
             </h1>
-            <p className="text-lg text-slate-300">
-              We help ambitious teams modernize delivery with resilient cloud platforms, secure CI/CD,
-              and automation-first operations built for speed.
+            <p className="text-lg leading-8 text-slate-300">
+              We design secure, scalable, and automation-first DevOps ecosystems that accelerate releases,
+              strengthen governance, and unlock measurable business velocity.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="/contact" className="rounded-2xl border border-white/20 bg-white/10 px-6 py-3 font-semibold text-white transition hover:bg-white/20">
+              <Link
+                to="/contact"
+                className="rounded-2xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:scale-[1.02]"
+              >
                 Start a Transformation
-              </a>
-              <a href="/services" className="rounded-2xl border border-white/20 bg-transparent px-6 py-3 font-semibold text-slate-300 transition hover:text-white">
+              </Link>
+              <Link
+                to="/services"
+                className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white backdrop-blur-xl transition hover:bg-white/10"
+              >
                 Explore Services
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
-            <h2 className="text-2xl font-semibold text-white">Why leading teams choose Fusionnex</h2>
-            <ul className="mt-5 space-y-3 text-slate-300">
+            <h2 className="text-2xl font-semibold text-white">What drives premium outcomes</h2>
+            <ul className="mt-6 space-y-4 text-slate-300">
               {pillars.map((pillar) => (
-                <li key={pillar}>✦ {pillar}</li>
+                <li key={pillar} className="rounded-xl border border-white/10 bg-white/5 px-4 py-3">
+                  ✦ {pillar}
+                </li>
               ))}
             </ul>
           </div>
