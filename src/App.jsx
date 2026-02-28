@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import AnimatedBackground from './components/AnimatedBackground';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Industries from './pages/Industries';
@@ -10,7 +11,8 @@ import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 
 const AppLayout = ({ children }) => (
-  <div className="min-h-screen bg-white text-slate-800">
+  <div className="relative min-h-screen bg-transparent text-slate-800">
+    <AnimatedBackground />
     <Navbar />
     <main>{children}</main>
     <Footer />
