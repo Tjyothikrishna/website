@@ -1,7 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/Fusionnexlogo.jpg';
 
-// Responsive navigation bar for multi-page website navigation.
 const Navbar = () => {
   const links = [
     { to: '/', label: 'Home' },
@@ -14,13 +13,13 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-white/10 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Fusionnex logo" className="h-10 w-10 rounded object-cover" />
+          <img src={logo} alt="Fusionnex logo" className="h-10 w-10 rounded-xl border border-white/20 object-cover" />
           <span className="flex flex-col leading-tight">
-            <span className="text-lg font-bold tracking-tight text-slate-900">FUSIONNEX</span>
-            <span className="text-xs text-slate-500">Innovations India Pvt Ltd</span>
+            <span className="text-lg font-bold tracking-tight text-white">FUSIONNEX</span>
+            <span className="text-xs text-slate-300">Innovations India Pvt Ltd</span>
           </span>
         </Link>
 
@@ -30,7 +29,9 @@ const Navbar = () => {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `text-sm font-medium transition ${isActive ? 'text-blue-900' : 'text-slate-600 hover:text-blue-800'}`
+                `text-sm font-medium transition ${
+                  isActive ? 'text-white' : 'text-slate-300 hover:text-white'
+                }`
               }
             >
               {link.label}
@@ -40,7 +41,7 @@ const Navbar = () => {
 
         <Link
           to="/contact"
-          className="rounded-md bg-blue-900 px-4 py-2 text-sm font-semibold text-white transition duration-300 hover:bg-red-600"
+          className="rounded-xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
         >
           Talk to an Expert
         </Link>

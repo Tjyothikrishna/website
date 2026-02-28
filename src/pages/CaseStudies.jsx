@@ -1,5 +1,6 @@
 import PageSeo from '../components/PageSeo';
 import AnimatedSection from '../components/AnimatedSection';
+
 const studies = [
   {
     client: 'Global Retail Brand',
@@ -17,22 +18,22 @@ const studies = [
 
 const CaseStudies = () => {
   return (
-    <AnimatedSection className="bg-slate-50 py-20">
+    <AnimatedSection className="bg-transparent px-6 py-24">
       <PageSeo
         title="Case Studies | Fusionnex Transformation Outcomes"
         description="Read Fusionnex case studies showcasing measurable outcomes in CI/CD modernization, cloud reliability, and secure digital transformation."
         ogType="article"
       />
-            <div className="mx-auto w-full max-w-6xl px-6">
-        <h1 className="text-4xl font-bold text-slate-900">Case Studies</h1>
-        <p className="mt-4 max-w-3xl text-slate-600">
-          Real outcomes from enterprise engagements focused on measurable delivery improvements.
+      <div className="mx-auto w-full max-w-6xl">
+        <h1 className="text-4xl font-bold text-white md:text-5xl">Case Studies</h1>
+        <p className="mt-4 max-w-3xl text-slate-300">
+          Real outcomes from enterprise programs focused on velocity, uptime, and operational confidence.
         </p>
-        <div className="mt-10 space-y-5">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {studies.map((study) => (
-            <article key={study.client} className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-              <h2 className="text-xl font-semibold text-slate-900">{study.client}</h2>
-              <p className="mt-3 text-slate-600">{study.outcome}</p>
+            <article key={study.client} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+              <h2 className="text-xl font-semibold text-white">{study.client}</h2>
+              <p className="mt-3 text-slate-300">{study.outcome}</p>
             </article>
           ))}
         </div>
