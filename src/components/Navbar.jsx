@@ -23,7 +23,7 @@ const Navbar = () => {
           />
           <span className="flex flex-col leading-tight">
             <span className="text-lg font-bold tracking-tight text-white">FUSIONNEX</span>
-            <span className="text-xs text-slate-300">Premium Cloud Engineering</span>
+            <span className="text-xs text-slate-300">INNOVATIONS INDIA PVT LTD</span>
           </span>
         </Link>
 
