@@ -1,8 +1,12 @@
-import ServicesSection from '../components/Services';
-import AboutSection from '../components/About';
-import ContactSection from '../components/Contact';
+import { Link } from 'react-router-dom';
 import PageSeo from '../components/PageSeo';
 import AnimatedSection from '../components/AnimatedSection';
+
+const pillars = [
+  'AI-augmented delivery pipelines with enterprise controls',
+  'Cloud-native platform engineering with SRE reliability',
+  'Security, compliance, and governance embedded by design',
+];
 
 const Home = () => {
   return (
@@ -12,56 +16,47 @@ const Home = () => {
         description="Fusionnex delivers scalable cloud and DevOps platforms with CI/CD automation, Kubernetes, IaC, DevSecOps, and SRE excellence."
         ogType="website"
       />
-      <AnimatedSection className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 bg-[length:200%_200%] animate-[gradientShift_10s_ease_infinite]">
-        <div className="pointer-events-none absolute inset-0 opacity-10 [background-image:linear-gradient(to_right,rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.2)_1px,transparent_1px)] [background-size:48px_48px]" />
-        <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-red-600 opacity-20 blur-3xl animate-pulse" />
 
-        <div className="relative mx-auto grid w-full max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
-          <div>
-            <p className="mb-4 inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium text-white">
-              Trusted by fast-growing businesses
+      <AnimatedSection className="flex min-h-screen items-center bg-transparent px-6 py-24">
+        <div className="mx-auto grid w-full max-w-6xl gap-10 md:grid-cols-2 md:items-center">
+          <div className="space-y-7">
+            <p className="inline-flex rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-slate-300 backdrop-blur-xl">
+              Fusionnex Premium Layout System
             </p>
-            <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl">
-              Engineering Scalable Cloud &amp; DevOps Platforms for Modern Enterprises
+            <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
+              Build Futuristic Cloud Platforms with Enterprise Reliability
             </h1>
-            <p className="mt-6 text-lg text-blue-100">
-              We deliver CI/CD automation, Infrastructure as Code, Kubernetes enablement, DevSecOps
-              practices, and SRE-driven reliability to accelerate secure, resilient growth.
+            <p className="text-lg leading-8 text-slate-300">
+              We design secure, scalable, and automation-first DevOps ecosystems that accelerate releases,
+              strengthen governance, and unlock measurable business velocity.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#contact"
-                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-900 shadow transition hover:bg-blue-100"
+            <div className="flex flex-wrap gap-4">
+              <Link
+                to="/contact"
+                className="rounded-2xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:scale-[1.02]"
               >
-                Talk to an Expert
-              </a>
-              <a
-                href="#services"
-                className="rounded-md border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                Start a Transformation
+              </Link>
+              <Link
+                to="/services"
+                className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white backdrop-blur-xl transition hover:bg-white/10"
               >
-                View Services
-              </a>
+                Explore Services
+              </Link>
             </div>
           </div>
 
-          <div className="rounded-2xl border border-white/20 bg-white/10 p-8 shadow-sm backdrop-blur-sm">
-            <h2 className="text-xl font-semibold text-white">Why companies choose us</h2>
-            <ul className="mt-5 space-y-3 text-blue-100">
-              <li>✔ Data-driven strategy and measurable outcomes</li>
-              <li>✔ Experienced team focused on quality delivery</li>
-              <li>✔ Scalable systems designed for long-term growth</li>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
+            <h2 className="text-2xl font-semibold text-white">What drives premium outcomes</h2>
+            <ul className="mt-6 space-y-4 text-slate-300">
+              {pillars.map((pillar) => (
+                <li key={pillar} className="rounded-xl border border-white/10 bg-white/5 px-4 py-3">
+                  ✦ {pillar}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-      </AnimatedSection>
-      <AnimatedSection>
-        <ServicesSection />
-      </AnimatedSection>
-      <AnimatedSection>
-        <AboutSection />
-      </AnimatedSection>
-      <AnimatedSection>
-        <ContactSection />
       </AnimatedSection>
     </>
   );
