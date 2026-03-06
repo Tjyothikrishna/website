@@ -5,60 +5,67 @@ import AnimatedSection from '../components/AnimatedSection';
 const industrySolutions = [
   {
     title: 'Financial Services',
-    summary: 'Compliant digital delivery with resilient, auditable cloud platforms for high-volume systems.',
+    summary: 'Secure cloud platforms with governance, resilience, and audit-ready operations.',
   },
   {
     title: 'Healthcare & Life Sciences',
-    summary: 'Secure modernization for regulated data ecosystems with reliability-first operations.',
+    summary: 'Compliance-aligned digital systems with reliable data and service continuity.',
   },
   {
     title: 'Retail & E-Commerce',
-    summary: 'Auto-scaling commerce foundations for peak demand and rapid feature delivery.',
+    summary: 'Elastic infrastructure and release automation for seasonal and high-demand traffic.',
   },
   {
     title: 'SaaS & Technology',
-    summary: 'High-velocity shipping with SLO-centric reliability and secure multi-tenant architecture.',
+    summary: 'High-velocity engineering practices with observability and reliability engineering.',
   },
   {
-    title: 'Enterprise & Manufacturing',
-    summary: 'Hybrid-cloud operating models that unify governance, visibility, and continuity at scale.',
+    title: 'Manufacturing',
+    summary: 'Connected operations and modernization across hybrid and multi-cloud environments.',
+  },
+  {
+    title: 'Telecom',
+    summary: 'Scalable platform orchestration for network services and digital customer channels.',
   },
 ];
 
 const Industries = () => {
   return (
-    <AnimatedSection className="min-h-screen bg-transparent px-6 py-24">
+    <>
       <PageSeo
-        title="Industries | Fusionnex Industry-Focused Cloud & DevOps Solutions"
-        description="Discover Fusionnex industry-specific cloud and DevOps solutions for financial services, healthcare, retail, SaaS, and manufacturing enterprises."
+        title="Industries | Fusionnex Solutions"
+        description="Industry-specific cloud and DevOps consulting for finance, healthcare, retail, SaaS, manufacturing, and telecom."
         ogType="website"
       />
 
-      <div className="mx-auto w-full max-w-6xl space-y-14">
-        <section className="rounded-2xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
-          <h1 className="text-4xl font-bold text-white md:text-5xl">Industry-Aligned Transformation</h1>
-          <p className="mt-4 max-w-3xl text-slate-300 md:text-lg">
-            Fusionnex delivers domain-aware platform engineering strategies that align compliance, resilience,
-            and modernization velocity for regulated and high-growth markets.
-          </p>
-          <Link
-            to="/contact"
-            className="mt-7 inline-flex rounded-2xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:scale-[1.02]"
-          >
-            Build an Industry Roadmap
-          </Link>
-        </section>
+      <AnimatedSection className="bg-transparent py-24">
+        <section className="min-h-screen py-24">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex flex-col gap-10">
+              <section className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-10">
+                <h1 className="text-4xl font-bold text-white md:text-5xl">Industries Served</h1>
+                <p className="mt-4 max-w-3xl leading-8 text-slate-300">
+                  Fusionnex combines domain context with modern engineering practices to help industry leaders modernize
+                  securely and scale predictably.
+                </p>
+                <Link to="/contact" className="mt-7 inline-flex rounded-xl border border-white/10 bg-white/10 px-6 py-3 font-semibold text-white">
+                  Build an Industry Roadmap
+                </Link>
+              </section>
 
-        <section className="grid gap-6 md:grid-cols-2">
-          {industrySolutions.map((industry) => (
-            <article key={industry.title} className="rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur-xl">
-              <h2 className="text-2xl font-semibold text-white">{industry.title}</h2>
-              <p className="mt-3 text-slate-300">{industry.summary}</p>
-            </article>
-          ))}
+              <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {industrySolutions.map((industry) => (
+                  <article key={industry.title} className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-6">
+                    <h2 className="text-xl font-semibold text-white">{industry.title}</h2>
+                    <p className="mt-3 text-slate-300">{industry.summary}</p>
+                  </article>
+                ))}
+              </section>
+            </div>
+          </div>
         </section>
-      </div>
-    </AnimatedSection>
+      </AnimatedSection>
+    </>
   );
 };
 
