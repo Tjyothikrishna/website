@@ -74,6 +74,12 @@ const techStack = [
   },
 ];
 
+
+const safeTeamMembers = Array.isArray(teamMembers) ? teamMembers : [];
+const safeTimelineMilestones = Array.isArray(timelineMilestones) ? timelineMilestones : [];
+const safeGlobalClients = Array.isArray(globalClients) ? globalClients : [];
+const safeTechStack = Array.isArray(techStack) ? techStack : [];
+
 const About = () => {
   return (
     <>
@@ -154,7 +160,7 @@ const About = () => {
               <section className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-8">
                 <h2 className="text-3xl font-semibold text-white">Team Members</h2>
                 <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {teamMembers.map((member) => (
+                  {safeTeamMembers.map((member) => (
                     <article key={member.name} className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-5">
                       <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full border border-white/10 bg-white/10 text-xs text-slate-300">
                         Profile
@@ -170,7 +176,7 @@ const About = () => {
               <section className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-8">
                 <h2 className="text-3xl font-semibold text-white">Company Timeline</h2>
                 <div className="relative mt-8 space-y-8 before:absolute before:left-[11px] before:top-2 before:h-[calc(100%-20px)] before:w-px before:bg-white/20">
-                  {timelineMilestones.map((item) => (
+                  {safeTimelineMilestones.map((item) => (
                     <div key={item.year} className="relative pl-10">
                       <span className="absolute left-0 top-1.5 h-6 w-6 animate-pulse rounded-full border border-white/20 bg-white/20" />
                       <p className="text-sm font-semibold tracking-wide text-white">{item.year}</p>
@@ -183,7 +189,7 @@ const About = () => {
               <section className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-8">
                 <h2 className="text-3xl font-semibold text-white">Trusted by Global Clients</h2>
                 <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {globalClients.map((client) => (
+                  {safeGlobalClients.map((client) => (
                     <div
                       key={client}
                       className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl flex min-h-24 items-center justify-center px-4 text-center text-slate-300"
@@ -197,7 +203,7 @@ const About = () => {
               <section className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-8">
                 <h2 className="text-3xl font-semibold text-white">Technology Stack</h2>
                 <div className="mt-6 grid gap-5 md:grid-cols-2">
-                  {techStack.map((category) => (
+                  {safeTechStack.map((category) => (
                     <article key={category.title} className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-6">
                       <div className="flex items-center gap-3">
                         <span className="text-2xl" aria-hidden="true">
