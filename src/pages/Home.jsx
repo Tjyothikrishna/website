@@ -2,61 +2,109 @@ import { Link } from 'react-router-dom';
 import PageSeo from '../components/PageSeo';
 import AnimatedSection from '../components/AnimatedSection';
 
-const pillars = [
-  'AI-augmented delivery pipelines with enterprise controls',
-  'Cloud-native platform engineering with SRE reliability',
-  'Security, compliance, and governance embedded by design',
+const services = ['Platform Engineering', 'DevSecOps Automation', 'Cloud Migration', 'SRE & Observability'];
+const industries = ['FinTech', 'Healthcare', 'Retail', 'SaaS', 'Manufacturing', 'Telecom'];
+const tech = ['React', 'Next.js', 'Node.js', 'Python', 'AWS', 'Kubernetes'];
+const testimonials = [
+  {
+    quote: 'Fusionnex helped us reduce release time by 60% while improving compliance visibility.',
+    author: 'CTO, Global Retail Group',
+  },
+  {
+    quote: 'Their DevOps and cloud architecture model improved reliability across our core workloads.',
+    author: 'VP Engineering, FinTech Enterprise',
+  },
 ];
+const clients = ['Northstar', 'Apex Finserv', 'Helios Health', 'Nova Mobility', 'Orbit Telecom', 'Summit Energy'];
 
 const Home = () => {
   return (
     <>
       <PageSeo
-        title="Fusionnex | Cloud & DevOps Engineering for Enterprises"
-        description="Fusionnex delivers scalable cloud and DevOps platforms with CI/CD automation, Kubernetes, IaC, DevSecOps, and SRE excellence."
+        title="Fusionnex | Modern DevOps & Cloud Consulting"
+        description="Fusionnex helps enterprises scale digital delivery through cloud-native platforms, DevSecOps, and SRE excellence."
         ogType="website"
       />
 
-      <AnimatedSection className="flex min-h-screen items-center bg-transparent px-6 py-24">
-        <div className="mx-auto grid w-full max-w-6xl gap-10 md:grid-cols-2 md:items-center">
-          <div className="space-y-7">
-            <p className="inline-flex rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-slate-300 backdrop-blur-xl">
-              Fusionnex Premium Layout System
-            </p>
-            <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
-              Build Futuristic Cloud Platforms with Enterprise Reliability
-            </h1>
-            <p className="text-lg leading-8 text-slate-300">
-              We design secure, scalable, and automation-first DevOps ecosystems that accelerate releases,
-              strengthen governance, and unlock measurable business velocity.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to="/contact"
-                className="rounded-2xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-900/40 transition hover:scale-[1.02]"
-              >
-                Start a Transformation
-              </Link>
-              <Link
-                to="/services"
-                className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white backdrop-blur-xl transition hover:bg-white/10"
-              >
-                Explore Services
-              </Link>
+      <AnimatedSection className="bg-transparent py-24">
+        <section className="min-h-screen py-24">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex flex-col gap-10">
+              <section className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl px-8 py-14 text-center">
+                <p className="inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-1 text-sm text-slate-300">
+                  Cloud • DevOps • AI Platforms
+                </p>
+                <h1 className="mt-5 text-4xl font-bold text-white md:text-6xl">Build and Scale Like a Modern DevOps Company</h1>
+                <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-300">
+                  Fusionnex designs and operates secure cloud platforms that help enterprises ship faster, improve
+                  reliability, and innovate with confidence.
+                </p>
+                <div className="mt-8 flex flex-wrap justify-center gap-4">
+                  <Link
+                    to="/services"
+                    className="rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 px-6 py-3 font-semibold text-white"
+                  >
+                    Explore Services
+                  </Link>
+                  <Link to="/contact" className="rounded-xl bg-white/10 border border-white/10 px-6 py-3 font-semibold text-white">
+                    Talk to Experts
+                  </Link>
+                </div>
+              </section>
+
+              <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                {services.map((item) => (
+                  <article key={item} className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-5">
+                    <h2 className="text-lg font-semibold text-white">{item}</h2>
+                    <p className="mt-2 text-sm text-slate-300">Outcome-focused consulting for enterprise scale.</p>
+                  </article>
+                ))}
+              </section>
+
+              <section className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-8">
+                <h2 className="text-3xl font-semibold text-white">Industries Served</h2>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {industries.map((industry) => (
+                    <div key={industry} className="rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-slate-300">
+                      {industry}
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-8">
+                <h2 className="text-3xl font-semibold text-white">Technology Stack</h2>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {tech.map((item) => (
+                    <div key={item} className="rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-slate-300">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section className="grid gap-6 lg:grid-cols-2">
+                {testimonials.map((testimonial) => (
+                  <article key={testimonial.author} className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-6">
+                    <p className="text-slate-300">“{testimonial.quote}”</p>
+                    <p className="mt-4 text-white font-semibold">{testimonial.author}</p>
+                  </article>
+                ))}
+              </section>
+
+              <section className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-8">
+                <h2 className="text-3xl font-semibold text-white">Global Clients</h2>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {clients.map((client) => (
+                    <div key={client} className="bg-white/10 border border-white/10 rounded-xl min-h-20 flex items-center justify-center text-slate-300">
+                      {client}
+                    </div>
+                  ))}
+                </div>
+              </section>
             </div>
           </div>
-
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
-            <h2 className="text-2xl font-semibold text-white">What drives premium outcomes</h2>
-            <ul className="mt-6 space-y-4 text-slate-300">
-              {pillars.map((pillar) => (
-                <li key={pillar} className="rounded-xl border border-white/10 bg-white/5 px-4 py-3">
-                  ✦ {pillar}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        </section>
       </AnimatedSection>
     </>
   );
